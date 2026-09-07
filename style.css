@@ -19,3 +19,55 @@
 @media(max-width:900px){.main-nav{position:fixed;inset:var(--header-h) 0 0 0;background:var(--green-deep);padding:28px 24px;transform:translateX(100%);transition:transform .25s;overflow-y:auto}.main-nav.open{transform:translateX(0)}.main-nav ul{flex-direction:column;gap:4px}.main-nav a{display:block;padding:14px 4px;font-size:1.05rem;border-bottom:1px solid rgba(255,255,255,.08)}.header-call{margin-left:auto}.menu-toggle{display:flex}.about-grid,.location-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.about-points{grid-template-columns:1fr}.service-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:repeat(2,1fr)}.values-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.section{padding:65px 0}.container,.header-inner{padding-left:18px;padding-right:18px}.brand-name{font-size:.92rem}.header-call{display:none}.hero{min-height:92vh}.hero-inner{padding:0 18px 54px}.hero-headline{font-size:clamp(2.35rem,12vw,3.5rem)}.hero-sub{font-size:1rem}.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%}.product-grid,.service-grid,.mission-grid,.why-grid,.values-grid{grid-template-columns:1fr}.product-body{padding:20px}.product-body .btn{width:100%}.section-head{margin-bottom:32px}.location-copy h2,.contact-info h2{font-size:2.1rem}.contact-form{padding:22px 18px}.footer-grid{grid-template-columns:1fr}.footer-nav{justify-content:flex-start}.whatsapp-float{right:16px;bottom:16px}.back-to-top{right:16px;bottom:82px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+
+/* Premium agro-tech machinery image gallery */
+.product-card:nth-child(4) .product-media{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  padding:8px;
+  background:var(--green-deep);
+  aspect-ratio:16/9;
+  overflow:hidden;
+}
+
+.product-card:nth-child(4) .product-media img{
+  display:none;
+}
+
+.product-card:nth-child(4) .product-media::before,
+.product-card:nth-child(4) .product-media::after{
+  content:"";
+  display:block;
+  height:100%;
+  border-radius:5px;
+  background-size:cover;
+  background-position:center;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);
+}
+
+.product-card:nth-child(4) .product-media::before{
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Small_Chicken_Egg_Incubator.jpg/1280px-Small_Chicken_Egg_Incubator.jpg");
+}
+
+.product-card:nth-child(4) .product-media::after{
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Power_tiller_or_cultivator.jpg/1280px-Power_tiller_or_cultivator.jpg");
+}
+
+.product-card:nth-child(4) .product-media{
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/SOLAR_POWER_IRRIGATION_RICE_FARMING.jpg/1280px-SOLAR_POWER_IRRIGATION_RICE_FARMING.jpg");
+  background-size:calc((100% - 24px)/3) 100%;
+  background-repeat:no-repeat;
+  background-position:calc(100% - 8px) center;
+}
+
+@media(max-width:650px){
+  .product-card:nth-child(4) .product-media{
+    aspect-ratio:1.35/1;
+    gap:5px;
+    padding:5px;
+    background-size:calc((100% - 15px)/3) 100%;
+    background-position:calc(100% - 5px) center;
+  }
+}

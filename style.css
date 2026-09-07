@@ -71,3 +71,40 @@
     background-position:calc(100% - 5px) center;
   }
 }
+
+/* Online product catalogue */
+.catalogue-note{margin:0 auto 28px;max-width:980px;padding:16px 20px;border:1px solid rgba(20,46,34,.12);border-left:4px solid var(--gold);background:rgba(247,242,229,.75);border-radius:8px;line-height:1.6}
+
+.catalogue-grid{align-items:stretch}
+
+.catalogue-card{display:flex;flex-direction:column}
+
+.catalogue-card .product-media{aspect-ratio:16/10}
+
+.catalogue-card .product-body{display:flex;flex-direction:column;flex:1}
+
+.stock-line{font-size:.9rem!important;font-weight:700;color:var(--green-deep);margin-top:auto!important;padding-top:8px}
+
+.catalogue-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+
+.catalogue-actions .btn{flex:1 1 180px;text-align:center}
+
+.catalogue-enquire{display:inline-flex;align-items:center;justify-content:center;flex:1 1 130px;padding:.72rem 1rem;border:1px solid rgba(20,46,34,.25);border-radius:4px;color:var(--green-deep);font-weight:700;text-decoration:none;background:#fff}
+
+.catalogue-enquire:hover{background:var(--cream);border-color:var(--gold)}
+
+/* Reset the earlier machinery mosaic for the new catalogue cards */
+.catalogue-card .product-media{display:block!important;background-image:none!important;background-size:auto!important;background-position:initial!important;gap:0!important;padding:0!important;aspect-ratio:16/10!important}
+
+.catalogue-card .product-media img{display:block!important;position:static!important;width:100%!important;height:100%!important;opacity:1!important;object-fit:cover!important}
+
+.catalogue-card .product-media::before,
+.catalogue-card .product-media::after{content:none!important;display:none!important}
+
+@media(max-width:650px){
+  .catalogue-note{font-size:.92rem;padding:14px}
+  .catalogue-actions{flex-direction:column}
+  .catalogue-actions .btn,
+  .catalogue-enquire{width:100%;flex-basis:auto}
+  .catalogue-card .product-media{aspect-ratio:1.35/1!important}
+}
